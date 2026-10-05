@@ -2,14 +2,99 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Мой первый сайт</title>
+    <title>Мой первый сайт</title>    
+    <style>
+@import url('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css');
+
+/* Основной стиль текста */
+body {
+    margin: 0;
+    font-family: 'Arial Black', Arial, sans-serif; /* Более страшный шрифт */
+    text-align: center;
+    color: #f5cac3; /* Бледно-розовый цвет текста */
+    
+    background-color: #141e27; /* Тёмно-синий "кровавый" фон */
+    background-image: url('./web.jpg'); /* Паутина */
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.avatar img {
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+    transition: all .3s ease;
+}
+
+.avatar img:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: #d93a4b; /* Красный оттенок */
+    color: white;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all .3s ease;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #ba2836; /* Темнее при наведении */
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+}
+
+h1 { /* Заголовок стал красным */
+    color: #ff5555;
+    letter-spacing: 2px; /* Немного растянуть буквы */
+}
+
+/* Эффект призраков для социальных иконок */
+.social li a i {
+    font-size: 1.5rem;
+    color: #aaa;
+    transition: opacity .3s ease;
+}
+
+.social li a i:hover {
+/* Вместо белого сделаем их прозрачными */
+    opacity: 0.2;
+}
+</style>
+    </style>
 </head>
 <body>
-    <!-- Приветствие -->
-    <h1>Привет, мир!</h1>
+<div class="container">
+    <!-- Аватарка -->
+    <div class="avatar">
+        <img src="./avatar.jpg" alt="Аватар пользователя"> 
+    </div>
+    
+    <!-- Описание -->
+    <h1>Привет!</h1>
     <p>Это моя первая веб-страница.</p>
+    <p>Здесь я учусь создавать сайты...</p>
+    <p>И теперь могу делать их по-настоящему крутыми!</p>
 
-    <!-- Ссылка на профиль GigaChat -->
-    <a href="https://t.me/GigaChat">Перейти к моему наставнику</a>
+    <!-- Ссылка на профиль -->
+    <a href="#" target="_blank" class="btn">Посмотреть мой профиль ➡️</a>
+
+    <!-- Соцсети -->
+    <ul class="social">
+        <li><a href="https://steamcommunity.com/profiles/76561199831450069/"><i class="fa-brands fa-steam"></i></a></li>
+       <li><a href="https://guns.lol/vinnielfbar"><i class="fa-solid fa-gamepad"></i></a></li>
+        <li><a href="https://github.com/vinnielfbar"><i class="fa-brands fa-github"></i></a></li>
+    </ul>
+</div>
 </body>
 </html>
